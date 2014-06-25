@@ -88,9 +88,14 @@ input{
     font-weight: 400;
     font-size: 24px;
     text-indent: 10px;
+    background-color: #ffffff;
+    transition: background-color .3s ease-out 0s;
 }
 input:hover{
-    border: 1px solid #5eedb5;
+    border: 1px solid orange;
+    background-color: #444444;
+    color: #ffffff !important;
+    transition: background-color .3s ease-in 0s;
 }
 button{
     width: 40%;
