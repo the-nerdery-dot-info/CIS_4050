@@ -9,16 +9,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <title>MSU Student Advising Portal</title>
 <link href="css/profilelayout.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/lou-multi-select-5839faf/css/multi-select.css" rel="stylesheet" type="text/css" media="screen"/>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="../CIS_4050/assets/lou-multi-select-5839faf/js/jquery.multi-select.js"></script>
 
+<script type="text/javascript">
+    //instance for multiselect list by department
+    $(document).ready(function(){
+        $('#my-select-cis').multiSelect();
+        $('#my-select-mkt').multiSelect();
 
+    //jquery ui buttonset for seleciton of departments
+    $('#departments').buttonset();
 
+    //Toggle through multiselect lists based on department selected
+    if($('').val() == "cis"){
+        $('#cis-wrap').toggle( "drop" , {direction: "up"}, 1000 );
+    }
+    });
+
+</script>
 
 </head>
 <body>
     <div id="wrapper2">
-    <h1>Create a student profile</h1>
+    <h1>MSU Denver School of Business Advising Portal</h1>
+   <!--radio buttons for student to select department which will trigger different select lists-->
+            <div id="departments" class="departments">
+                    <p>Please select a department</p>
+                <input type="radio" id="cis" name="select_dept" value="cis" />
+                <label for="cis">CIS</label>
+                <input type="radio" id="mkt" name="select_dept" value="mkt" />
+                <label for="mkt">Marketing</label>
+                <input type="radio" id="mgt" name="select_dept" value="mgt" />
+                <label for="mgt">Management</label>
+                <input type="radio" id="acc" name="select_dept" value="acc" />
+                <label for="acc">Accounting</label>
+                <input type="radio" id="fin" name="select_dept" value="fin" />
+                <label for="fin">Finance</label>
+            </div>
+
     <form action="" method="post">
         <div id="wrap-left">
             <fieldset>
@@ -30,6 +63,46 @@
             <input type="text" placeholder="Email" value=""/>
             </fieldset>
         </div>
+        <div id="wrap-right">
+            <!--multiselect list for cis department-->
+            <div id="cis-wrap">
+            <legend>Please select all of the courses you have taken for your CIS degree path.</legend>
+            <select multiple="multiple" id="my-select-cis" name="my-select[]">
+                  <optgroup label='General Education Courses'>
+                    <option value='1'>Yoda</option>
+                    <option value='2'>Obiwan</option>
+                  </optgroup>
+                  <optgroup label='School of Business Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+                  <optgroup label='CIS Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+            </select>
+            </div>
+            <!--end multiselect list for cis department-->
+             <!--multiselect list for mkt department-->
+            <div id="mkt-wrap">
+            <legend>Please select all of the courses you have taken for your MKT degree path.</legend>
+            <select multiple="multiple" id="my-select-mkt" name="my-select[]">
+                  <optgroup label='General Education Courses'>
+                    <option value='1'>Yoda</option>
+                    <option value='2'>Obiwan</option>
+                  </optgroup>
+                  <optgroup label='School of Business Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+                  <optgroup label='MKT Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+            </select>
+            </div>
+            <!--end multiselect list for mkt department-->
+        </div>
         <div id="wrap-center">
             <fieldset>
             <legend>Choose a User Name and Password</legend>
@@ -37,8 +110,7 @@
             <input type="text" placeholder="Password" value=""/>
             </fieldset>
         </div>
-        <button type="submit" value="Submit">Create Profile!</button>
-
+        <button id="profile-button" type="submit" value="Submit">Create Profile!</button>
     </form>
     </div>
 </body>

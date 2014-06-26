@@ -12,7 +12,7 @@ html{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    min-height: 130% !important;
+    min-height: 1100px !important;
 }
 body{
     margin: 0 auto;
@@ -60,6 +60,14 @@ fieldset{
     outline: none;
     border: none;
 }
+#wrap-right{
+    display: block;
+    float: right;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
 #wrap-center{
     width: 40%;
     margin: 30px 30% 0 30%;
@@ -97,7 +105,12 @@ input:hover{
     color: #ffffff !important;
     transition: background-color .3s ease-in 0s;
 }
-button{
+input:focus{
+    border: 1px solid #5eedb5;
+    background-color: #444444;
+    color: #ffffff !important;
+}
+#login-button, #profile-button{
     width: 40%;
     margin: 40px 30% 40px 30%;
     height: 40px;
@@ -118,7 +131,7 @@ button{
     padding: 0;
 
 }
-a{
+#anchor-wrap a{
     display: block;
     float: left;
     position: relative;
@@ -141,8 +154,50 @@ a{
 
 }
 
-button:hover{
+#login-button:hover, #profile-button:hover{
     color: #444444;
     border-top: .5px solid #444444;
     border-bottom: 2px solid #444444;
+}
+#departments{
+    display: block;
+    float: left;
+    width: 80%;
+    margin: 10px 10%;
+    padding: 0;
+}
+#departments p{
+    width: 80%;
+    margin: 10px 10% 10px 10%;
+    text-align: center;
+    color: #fafafa;
+    letter-spacing: .05em;
+    font-weight: 300;
+}
+.ui-button-text{
+    font-size: 16px;
+}
+.ui-button {
+    float: left;
+    width: 20%;
+    min-width: 60px;
+    
+    border: 1px solid #e6e6e6 !important;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    margin: 0;
+    padding: 0;
+    height: 35px;
+    float: left;
+}
+.ui-button.ui-widget.ui-state-active, .submit-section button:hover{
+   color: #fafafa !important;
+    border: 1px solid #fafafa !important;
+    background: #444;
+    background-image: -moz-linear-gradient(#1da1da, #333333);
+    background-image: linear-gradient(#1da1da, #333333);
+}
+#mkt-wrap{
+    display: none !important;
 }
