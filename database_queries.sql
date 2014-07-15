@@ -52,6 +52,29 @@ INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name
 INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3300','CIS','Managerial Statistics',NULL,'3');
 /*======END======INSERT INTO COURSES TABLE FOR SOB AND GEN ED======END======*/
 
+/*INSERT INTO COURSES TABLE FOR CIS DEPARTMENT MINUS SOB REQUIREMENTS*/
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3050','CIS','Managerial Statistics',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3060','CIS','Database Management Systems',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3145','CIS','Business Application Development with Visual Basic',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3230','CIS','Telecommunication Systems and Networking',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS4050','CIS','Systems Analysis & Design',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3030','CIS','Business Web Page Development',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3220','CIS','Analysis of Hardware, Software, and User Interfaces for Microcomputer Platforms',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3270','CIS','Advanced Computer Applications for Business',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3280','CIS','LAN and WAN Systems for Business',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3290','CIS','Operating Systems for End Users',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3460','CIS','Data Warehousing and Mining',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3490','CIS','Managing Business Information with Enterprise Systems',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3500','CIS','Information Systems Security',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS3980','CIS','Internship in Computer Information Systems',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS4030','CIS','Web Site Administration',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS4060','CIS','Advanced Database Management Systems',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS4160','CIS','Advanced Programming Seminar',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS4260','CIS','Database Administration',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS4280','CIS','Network Installation and Administration',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS4281','CIS','Network Installation and Administration With UNIX/Linux',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('CIS4410','CIS','Management Information Systems',NULL,'3');
+/*=========END=========INSERT INTO COURSES TABLE FOR CIS DEPARTMENT MINUS SOB REQUIREMENTS==========END=========*/
 
 /*INSERT INTO PRE REQ TABLE BUSINESS CORE AND GEN ED REQUIREMENTS*/
 /*
@@ -159,6 +182,7 @@ INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VA
 INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'M4950','MKT3000');
 /*======END======INSERT INTO PRE REQ TABLE BUSINESS CORE AND GEN ED REQUIREMENTS======END======*/
 
+
 SELECT
     S.department_id, D.department_name, DC.course_name, PRJT.course_id, PRT.pre_req_id, PRT.required_course_id
 FROM
@@ -220,18 +244,18 @@ WHERE
 /*Shows all of the courses taken that are also in the DEPARTMENT COURSES table*/
 /*===============================================*/
  SELECT
- DC.course_id
+ C.course_id
  	FROM
- 	`Classes Taken Table` CTT
+ 	`CoursesTaken` CT
     	JOIN
         `Student` S
         ON
-        CTT.student_id = S.student_id
+        CT.student_id = S.student_id
         JOIN
-        `Department Courses` DC
+        `Courses` C
         ON
-        DC.course_id = CTT.course_id
+        C.course_id = CT.course_id
 WHERE
-DC.course_id != CTT.course_id
+C.course_id != CT.course_id
 
 
