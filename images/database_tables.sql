@@ -50,3 +50,131 @@ CREATE TABLE Advisors (
     advisor_email VARCHAR(100) NOT NULL,
     PRIMARY KEY (advisor_id)
 ) ENGINE = Innodb;
+
+/*join department and student tables*/
+select
+    s.department_id/*, ct.course_id, c.course_id*/
+    from
+    `Student` s
+    join
+    `Department` d
+    on
+    d.department_id = s.department_id
+where
+student_id = 900544740;
+/*END====================*/
+
+/*join courses to department by student id*/
+select
+    s.department_id, c.course_id
+    from
+    `Student` s
+    join
+    `Department` d
+    on
+    d.department_id = s.department_id
+    join
+    `Courses` c
+    on
+    c.department_id = d.department_id
+where
+student_id = 900544740;
+/*END====================*/
+
+/*join courses taken table and show only cis class needed*/
+select
+    s.department_id, c.course_id, ct.course_id
+    from
+    `Student` s
+    join
+    `Department` d
+    on
+    d.department_id = s.department_id
+    join
+    `Courses` c
+    on
+    c.department_id = d.department_id
+    join
+    `CoursesTaken` ct
+    on
+    ct.course_id = c.course_id
+where
+    ct.course_id != c.course_id;
+/*END====================*/
+
+SELECT
+    S.department_id, D.department_name, DC.course_name, PRJT.course_id, PRT.pre_req_id, PRT.required_course_id
+FROM
+    `Student` S
+    JOIN
+    	`Department` D
+        ON
+        S.department_id = D.department_id
+    JOIN
+        `Department Courses` DC
+        ON
+        D.department_id = DC.department_id
+    JOIN
+    	`Pre Req Join Table` PRJT
+        ON
+        DC.course_id = PRJT.course_id
+    JOIN
+    	`Pre Req Table` PRT
+        ON
+        PRJT.pre_req_id = PRT.pre_req_id
+WHERE
+    `student_id` = 900544740;
+
+
+/*===============================================*/
+SELECT
+    S.department_id, D.department_name, DC.course_name, PRJT.course_id, PRT.pre_req_id, PRT.required_course_id
+FROM
+    `Student` S
+    JOIN
+    	`Department` D
+        ON
+        S.department_id = D.department_id
+    JOIN
+        `Department Courses` DC
+        ON
+        D.department_id = DC.department_id
+    JOIN
+    	`Pre Req Join Table` PRJT
+        ON
+        DC.course_id = PRJT.course_id
+    JOIN
+    	`Pre Req Table` PRT
+        ON
+        PRJT.pre_req_id = PRT.pre_req_id
+WHERE
+    `student_id` = 900544740;
+    SELECT
+    CTT.course_id
+    FROM
+    	`Classes Taken Table` CTT
+        JOIN
+        `Student` S
+        ON
+        CTT.student_id = S.student_id;
+
+
+/*===============================================*/
+/*Shows all of the courses taken that are also in the DEPARTMENT COURSES table*/
+/*===============================================*/
+ SELECT
+ C.course_id
+ 	FROM
+ 	`CoursesTaken` CT
+    	JOIN
+        `Student` S
+        ON
+        CT.student_id = S.student_id
+        JOIN
+        `Courses` C
+        ON
+        C.course_id = CT.course_id
+WHERE
+C.course_id != CT.course_id
+
+

@@ -24,6 +24,9 @@ body{
     background-position: bottom left;
     height: 100%;
 }
+#cis-wrap, #mgt-wrap, #mkt-wrap, #acc-wrap, #fin-wrap{
+    display: none;
+}
 #wrapper2{
 
     width: 90%;
@@ -43,7 +46,7 @@ h2{
 }
 form{
     width: 100%;
-    margin: 50px 0;
+    margin: 0px 0;
     padding: 0;
 }
 fieldset{
@@ -69,8 +72,8 @@ fieldset{
     position: relative;
 }
 #wrap-center{
-    width: 40%;
-    margin: 30px 30% 0 30%;
+    width: 50%;
+    margin: 30px 25% 0 25%;
     padding: 0;
     outline: none;
     border: none;
@@ -81,7 +84,40 @@ legend{
     border-bottom: 1px solid orange;
     font-size: 18px;
     margin: 5px 0 0 0;
-    
+
+}
+#departments{
+    display: block !important;
+    float: left;
+    position: relative;
+    height: 45px;
+    padding: 6px !important;
+    border-radius: 2px !important;
+    outline: none !important;
+    border-width: 1px !important;
+    border: 1px solid #444444;
+    font-size: 24px;
+    font-weight: 300;
+    color: #666666;
+    box-shadow: none;
+    transition: box-shadow .3s ease-in 0s;
+}
+#departments:hover{
+    background-color: #fafafa;
+    border: 1px solid #FFA500 !important;
+    transition: border
+    border-width: 1px;
+    box-shadow: 2px 2px 6px black;
+    transition: box-shadow .3s ease-in 0s;
+}
+#departments option{
+    color: black !important;
+    background: #fafafa;
+}
+#departments:-moz-focusring{
+    color: transparent !important;
+    text-shadow: 0 0 0 #000 !important;
+
 }
 input{
     clear: left;
@@ -92,18 +128,18 @@ input{
     border-radius: 5px;
     outline: none;
     border: 1px solid #666666;
-    color: #333333;
-    font-weight: 400;
+    color: black;
+    font-weight: 300;
     font-size: 24px;
     text-indent: 10px;
-    background-color: #ffffff;
-    transition: background-color .3s ease-out 0s;
+    box-shadow: none;
+    transition: box-shadow .3s ease-in 0s;
 }
 input:hover{
     border: 1px solid orange;
-    background-color: #444444;
-    color: #ffffff !important;
-    transition: background-color .3s ease-in 0s;
+    color: black !important;
+    box-shadow: 2px 2px 6px black;
+    transition: box-shadow .2s ease-in 0s;
 }
 input:focus{
     border: 1px solid #5eedb5;
@@ -162,8 +198,8 @@ input:focus{
 #departments{
     display: block;
     float: left;
-    width: 80%;
-    margin: 10px 10%;
+    width: 50%;
+    margin: 10px 25%;
     padding: 0;
 }
 #departments p{
@@ -181,7 +217,7 @@ input:focus{
     float: left;
     width: 20%;
     min-width: 60px;
-    
+
     border: 1px solid #e6e6e6 !important;
 }
 
@@ -197,7 +233,4 @@ input:focus{
     background: #444;
     background-image: -moz-linear-gradient(#1da1da, #333333);
     background-image: linear-gradient(#1da1da, #333333);
-}
-#mkt-wrap{
-    display: none !important;
 }

@@ -20,15 +20,47 @@
     //instance for multiselect list by department
     $(document).ready(function(){
         $('#my-select-cis').multiSelect();
+        $('#my-select-mgt').multiSelect();
         $('#my-select-mkt').multiSelect();
+        $('#my-select-fin').multiSelect();
+        $('#my-select-acc').multiSelect();
 
-    //jquery ui buttonset for seleciton of departments
-    $('#departments').buttonset();
 
-    //Toggle through multiselect lists based on department selected
-    if($('input #cis').val() == 'cis'){
-        $('#cis-wrap').toggle( "drop" , {direction: "up"}, 1000 );
-    }
+//========================================================
+          $('#departments').bind('change', function(){
+            //CIS department select menu
+            if( $("#departments").val() == 'cis') {
+                $("#cis-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            }else{
+                $("#cis-wrap").hide( "drop" , {direction: "left"}, 1200 );
+            }
+            //MGT department select menu
+            if( $("#departments").val() == 'mgt' ){
+                $("#mgt-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            }else{
+                $("#mgt-wrap").hide( "drop" , {direction: "left"}, 1200 );
+            }
+            //MKT department select menu
+            if( $("#departments").val() == 'mkt' ){
+                $("#mkt-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            }else{
+                $("#mkt-wrap").hide( "drop" , {direction: "left"}, 1200 );
+            }
+            //FIN department select menu
+            if( $("#departments").val() == 'fin' ){
+                $("#fin-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            }else{
+                $("#fin-wrap").hide( "drop" , {direction: "left"}, 1200 );
+            }
+            //ACC department select menu
+            if( $("#departments").val() == 'acc' ){
+                $("#acc-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            }else{
+                $("#acc-wrap").hide( "drop" , {direction: "left"}, 1200 );
+            }
+          });
+//========================================================
+
     });
 
 </script>
@@ -38,24 +70,11 @@
     <div id="wrapper2">
     <h1>MSU Denver School of Business Advising Portal</h1>
    <!--radio buttons for student to select department which will trigger different select lists-->
-            <div id="departments" class="departments">
-                    <p>Please select a department</p>
-                <input type="radio" id="cis" name="select_dept" value="cis" />
-                <label for="cis">CIS</label>
-                <input type="radio" id="mkt" name="select_dept" value="mkt" />
-                <label for="mkt">Marketing</label>
-                <input type="radio" id="mgt" name="select_dept" value="mgt" />
-                <label for="mgt">Management</label>
-                <input type="radio" id="acc" name="select_dept" value="acc" />
-                <label for="acc">Accounting</label>
-                <input type="radio" id="fin" name="select_dept" value="fin" />
-                <label for="fin">Finance</label>
-            </div>
 
     <form action="" method="post">
-        <div id="wrap-left">
+        <div id="wrap-center">
             <fieldset>
-            <legend>Student Infomation</legend>
+            <legend>Tell us a little bit about yourself.</legend>
             <input type="text" placeholder="Student ID (900 Number)" value=""/>
             <input type="text" placeholder="First Name" value=""/>
             <input type="text" placeholder="Last Name" value=""/>
@@ -63,11 +82,20 @@
             <input type="text" placeholder="Email" value=""/>
             </fieldset>
         </div>
-        <div id="wrap-right">
+     <select name="departments" id="departments" class="departments">
+          <p>Please select a department</p>
+           <option value="default" selected>Please choose a department</option>
+            <option name="cis" value="cis">Computer Information Systems</option>
+            <option name="mgt" value="mgt">Management</option>
+            <option name="mkt" value="mkt">Marketing</option>
+            <option name="fin" value="fin">Finance</option>
+            <option name="acc" value="acc">Accounting</option>
+    </select>
+           <div id="wrap-center">
             <!--multiselect list for cis department-->
             <div id="cis-wrap">
-            <legend>Please select all of the courses you have taken for your CIS degree path.</legend>
-            <select multiple="multiple" id="my-select-cis" name="my-select[]">
+            <legend>Please select the courses you have taken for your Computer Information Systems degree.</legend>
+            <select multiple="multiple" id="my-select-cis" name="my-select">
                   <optgroup label='General Education Courses'>
                     <option value='1'>Yoda</option>
                     <option value='2'>Obiwan</option>
@@ -83,10 +111,29 @@
             </select>
             </div>
             <!--end multiselect list for cis department-->
+             <!--multiselect list for mgt department-->
+            <div id="mgt-wrap">
+            <legend>Please select the courses you have taken for your Management degree.</legend>
+            <select multiple="multiple" id="my-select-mgt" name="my-select">
+                  <optgroup label='General Education Courses'>
+                    <option value='1'>Yoda</option>
+                    <option value='2'>Obiwan</option>
+                  </optgroup>
+                  <optgroup label='School of Business Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+                  <optgroup label='MKT Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+            </select>
+            </div>
+            <!--end multiselect list for mgt department-->
              <!--multiselect list for mkt department-->
             <div id="mkt-wrap">
-            <legend>Please select all of the courses you have taken for your MKT degree path.</legend>
-            <select multiple="multiple" id="my-select-mkt" name="my-select[]">
+            <legend>Please select the courses you have taken for your Marketing degree.</legend>
+            <select multiple="multiple" id="my-select-mkt" name="my-select">
                   <optgroup label='General Education Courses'>
                     <option value='1'>Yoda</option>
                     <option value='2'>Obiwan</option>
@@ -102,15 +149,46 @@
             </select>
             </div>
             <!--end multiselect list for mkt department-->
+             <!--multiselect list for fin department-->
+            <div id="fin-wrap">
+            <legend>Please select the courses you have taken for your Finance degree.</legend>
+            <select multiple="multiple" id="my-select-fin" name="my-select">
+                  <optgroup label='General Education Courses'>
+                    <option value='1'>Yoda</option>
+                    <option value='2'>Obiwan</option>
+                  </optgroup>
+                  <optgroup label='School of Business Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+                  <optgroup label='MKT Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+            </select>
+            </div>
+            <!--end multiselect list for fin department-->
+             <!--multiselect list for acc department-->
+            <div id="acc-wrap">
+            <legend>Please select the courses you have taken for your Accounting degree.</legend>
+            <select multiple="multiple" id="my-select-acc" name="my-select">
+                  <optgroup label='General Education Courses'>
+                    <option value='1'>Yoda</option>
+                    <option value='2'>Obiwan</option>
+                  </optgroup>
+                  <optgroup label='School of Business Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+                  <optgroup label='MKT Courses'>
+                    <option value='3'>Palpatine</option>
+                    <option value='4'>Darth Vader</option>
+                  </optgroup>
+            </select>
+            </div>
+            <!--end multiselect list for acc department-->
         </div>
-        <div id="wrap-center">
-            <fieldset>
-            <legend>Choose a User Name and Password</legend>
-            <input type="text" placeholder="User Name" value=""/>
-            <input type="text" placeholder="Password" value=""/>
-            </fieldset>
-        </div>
-        <button id="profile-button" type="submit" value="Submit">Create Profile!</button>
+        <button id="profile-button" type="submit" value="Submit">Advizzze Me!</button>
     </form>
     </div>
 </body>
