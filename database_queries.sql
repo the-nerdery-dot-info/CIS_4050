@@ -53,6 +53,42 @@ INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name
 INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ART1010','ART','Any Arts and Humanities class',NULL,'3');
 INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('GLB1010','GLB','Any Global Diversity Course satisfied within major',NULL,'3');
 INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('MLT1010','MLT','Any Multicultural Course satified within major',NULL,'3');
+
+/*ELECTIVES ONE CREDIT*/
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC1001','ELC','One credit hour elective',NULL,'1');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC2001','ELC','One credit hour elective',NULL,'1');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC3001','ELC','One credit hour elective',NULL,'1');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC4001','ELC','One credit hour elective',NULL,'1');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC5001','ELC','One credit hour elective',NULL,'1');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC6001','ELC','One credit hour elective',NULL,'1');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC7001','ELC','One credit hour elective',NULL,'1');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC8001','ELC','One credit hour elective',NULL,'1');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC9001','ELC','One credit hour elective',NULL,'1');
+
+/*ELECTIVES THREE CREDITS*/
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC1003','ELC','Three credit hour elective',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC2003','ELC','Three credit hour elective',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC3003','ELC','Three credit hour elective',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC4003','ELC','Three credit hour elective',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC5003','ELC','Three credit hour elective',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC6003','ELC','Three credit hour elective',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC7003','ELC','Three credit hour elective',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC8003','ELC','Three credit hour elective',NULL,'3');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC9003','ELC','Three credit hour elective',NULL,'3');
+
+/*ELECTIVES FOUR CREDITS*/
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC1004','ELC','Four credit hour elective',NULL,'4');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC2004','ELC','Four credit hour elective',NULL,'4');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC3004','ELC','Four credit hour elective',NULL,'4');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC4004','ELC','Four credit hour elective',NULL,'4');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC5004','ELC','Four credit hour elective',NULL,'4');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC6004','ELC','Four credit hour elective',NULL,'4');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC7004','ELC','Four credit hour elective',NULL,'4');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC8004','ELC','Four credit hour elective',NULL,'4');
+INSERT INTO `Metro_Advisor`.`Courses`(`course_id`, `department_id`, `course_name`, `course_desc`, `course_credit_hrs`) VALUES ('ELC9004','ELC','Four credit hour elective',NULL,'4');
+/*END ELECTIVES*/
+
+
 /*======END======INSERT INTO COURSES TABLE FOR SOB AND GEN ED======END======*/
 
 /*INSERT INTO COURSES TABLE FOR CIS DEPARTMENT MINUS SOB REQUIREMENTS*/
@@ -358,4 +394,3 @@ UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '81';
 UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '82';
 UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '83';
 UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '84';
-

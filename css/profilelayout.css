@@ -1,7 +1,7 @@
 *{
     font-family: lato, arial, sans-serif;
 }
-body, h1, form, input, button, #anchor_wrap, fieldset, #wrap-left, #wrap-center, legend, #wrapper2{
+body, h1, form, input, button, #anchor_wrap, fieldset, #wrap-left, #wrap-center, legend, #wrapper2, #wrap-center-multiselect{
     display: block;
     float: left;
     position: relative;
@@ -74,6 +74,13 @@ fieldset{
 #wrap-center{
     width: 50%;
     margin: 30px 25% 0 25%;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+#wrap-center-multiselect{
+    width: 80%;
+    margin: 30px 10% 0 10%;
     padding: 0;
     outline: none;
     border: none;
