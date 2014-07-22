@@ -26,8 +26,8 @@
             });
             //Freshmen 1
             $( "#freshmen1 ol" ).droppable({
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
+                activeClass: "active-class",
+                hoverClass: "hover-class",
                 accept: ":not(.ui-sortable-helper)",
                 drop: function( event, ui ) {
                     $( this ).find( ".placeholder" ).remove();
@@ -36,8 +36,8 @@
             })
             //Freshmen 2
             $( "#freshmen2 ol" ).droppable({
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
+                activeClass: "active-class",
+                hoverClass: "hover-class",
                 accept: ":not(.ui-sortable-helper)",
                 drop: function( event, ui ) {
                     $( this ).find( ".placeholder" ).remove();
@@ -46,8 +46,8 @@
             })
             //Freshmen 1
             $( "#sophmore1 ol" ).droppable({
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
+                activeClass: "active-class",
+                hoverClass: "hover-class",
                 accept: ":not(.ui-sortable-helper)",
                 drop: function( event, ui ) {
                     $( this ).find( ".placeholder" ).remove();
@@ -56,8 +56,8 @@
             })
             //Freshmen 2
             $( "#sophmore2 ol" ).droppable({
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
+                activeClass: "active-class",
+                hoverClass: "hover-class",
                 accept: ":not(.ui-sortable-helper)",
                 drop: function( event, ui ) {
                     $( this ).find( ".placeholder" ).remove();
@@ -66,8 +66,8 @@
             })
             //Freshmen 1
             $( "#junior1 ol" ).droppable({
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
+                activeClass: "active-class",
+                hoverClass: "hover-class",
                 accept: ":not(.ui-sortable-helper)",
                 drop: function( event, ui ) {
                     $( this ).find( ".placeholder" ).remove();
@@ -76,8 +76,8 @@
             })
             //Freshmen 2
             $( "#junior2 ol" ).droppable({
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
+                activeClass: "active-class",
+                hoverClass: "hover-class",
                 accept: ":not(.ui-sortable-helper)",
                 drop: function( event, ui ) {
                     $( this ).find( ".placeholder" ).remove();
@@ -86,8 +86,8 @@
             })
             //Freshmen 1
             $( "#senior1 ol" ).droppable({
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
+                activeClass: "active-class",
+                hoverClass: "hover-class",
                 accept: ":not(.ui-sortable-helper)",
                 drop: function( event, ui ) {
                     $( this ).find( ".placeholder" ).remove();
@@ -96,8 +96,8 @@
             })
             //Freshmen 2
             $( "#senior2 ol" ).droppable({
-                activeClass: "ui-state-default",
-                hoverClass: "ui-state-hover",
+                activeClass: "active-class",
+                hoverClass: "hover-class",
                 accept: ":not(.ui-sortable-helper)",
                 drop: function( event, ui ) {
                     $( this ).find( ".placeholder" ).remove();
@@ -109,7 +109,7 @@
                 sort: function() {
                     // gets added unintentionally by droppable interacting with sortable
                     // using connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
-                    $( this ).removeClass( "ui-state-default" );
+                    $( this ).removeClass( "active-class" );
                 }
             });
         });
