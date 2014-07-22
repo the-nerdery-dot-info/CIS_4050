@@ -1,0 +1,126 @@
+*{
+    font-family: lato, arial, sans-serif;
+}
+body, #degree-path-wrapper, #courses-needed-wrapper, header{
+    display: block;
+    float: left;
+    position: relative;
+}
+
+html{
+    background: linear-gradient(#1DA1DA, #1870AE) repeat scroll 0% 0% transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height: 1100px !important;
+}
+body{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    background-image: url('../../CIS_4050/images/msulogo2.png');
+    background-size: 400px 250px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    height: 100%;
+}
+#courses-needed-wrapper{
+    width: 28%;
+    margin: 50px 2.5%;
+    background: #fafafa;
+
+}
+#degree-path-wrapper{
+    width: 60%;
+    margin: 50px 2.5%;
+    background: #fafafa;
+}
+h1{
+    font-weight: 400;
+    border-top: 1px solid orange;
+    background: #fafafa;
+    border-radius: 2px;
+}
+#courses-needed-wrapper h1{
+    padding: 0;
+    width: 90%;
+    margin: 10px 5%;
+    font-size: 24px;
+    
+}
+#degree-path-wrapper h1{
+    padding: 0;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 20px;
+    text-indent: 8px;
+}
+h2{
+    font-weight: 300;
+    font-size: 16px;
+    border-bottom: 1px solid 1da1da;
+  /*  background: -webkit-linear-gradient(#555555 30%, #999999 90%); /* For Safari 5.1 to 6.0 */
+  /*  background: -o-linear-gradient(#555555 30%, #999999 90%); /* For Opera 11.1 to 12.0 */
+  /*  background: -moz-linear-gradient(#555555 30%, #999999 90%); /* For Firefox 3.6 to 15 */
+  /*  background: linear-gradient(#555555 30%, #999999 90%); /* Standard syntax */
+    background: #333333;
+    border: 1px solid #1da1da;
+    margin: 0;
+    padding: 5px 0 5px 5px;
+/*     border-radius: 2px; */
+}
+h2:hover{
+    background: -webkit-linear-gradient(#999999 30%, #e6e6e6 100%)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#999999 30%, #e6e6e6 100%)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#999999 30%, #e6e6e6 100%)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#555555 30%, #999999 100%); /* Standard syntax */    
+/*     border-bottom: 1px solid #1da1da;
+    border-top: 1px solid #1da1da; */
+}
+h2 a{
+    text-decoration: none;
+    color: white;
+    padding: 20px 0 !important;
+}
+#courses-needed{
+    background: #666666;
+    box-shadow: 2px 2px 10px black;
+    color: white;
+    margin: 10px 2.5%;
+    padding: 0;
+    display: block;
+    float: left;
+    position: relative;
+    width: 95%;
+}
+#courses-needed ul{
+    margin: 0;
+    padding: 10px 0 0 20px;
+    list-style: none;
+}
+#courses-needed li:hover{
+    color: #1da1da;
+    cursor: pointer;
+}
+header p:first-of-type{
+    margin-top: 50px;
+}
+header p{
+    color: #fafafa;
+    width: 64%;
+    font-weight: 300;
+    color: black;
+    float: right;
+    margin: 10px 10px 0 0;
+    line-height: 1.2em;
+    font-size: 18px;
+    padding: 0;
+}
+#banner{
+    background-color: orange !important;
+    font-size: 36px;
+    text-align: center;
+    font-weight: 300;
+    color: #fafafa;
+    
+}
