@@ -12,3 +12,5 @@ Some things to consider:
 
 -- Show percentage complete widget on success page for users to see how far along they are in degree path.
 -- Give a little message to the student from the range they are in that pumps them up for the continuation of thier degree.
+
+--Tell student if they are freshmen, sophmore, junior, or senior based on how many credit hours they have from courses entered.
