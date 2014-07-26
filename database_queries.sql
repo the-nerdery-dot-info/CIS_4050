@@ -303,94 +303,110 @@ INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VA
 INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'M4950','MKT3000');
 /*======END======INSERT INTO PRE REQ TABLE BUSINESS CORE AND GEN ED REQUIREMENTS======END======*/
 
-/*INSERT INTO PRE REQ TABLE CIS SPECIFIC REQUIREMENTS*/
-/*INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C2110','CIS2010');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3050','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3060','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3145','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3230','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4050','CIS3050');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4050','CIS3060');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4050','CIS3145');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4050','CIS3230');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3030','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3220','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3270','CIS2010');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3280','CIS3230');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3290','CIS2010');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3290','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3460','CIS3060');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3460','ACC3300');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3460','CIS3300');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3490','CIS2010');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C3500','CIS3230');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4030','CIS3030');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4060','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4060','CIS3060');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4160','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4160','CIS3060');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4260','CIS3060');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4280','CIS3230');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4281','CIS3230');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4410','CIS2110');
-INSERT INTO `Metro_Advisor`.`PreReq`( `table_key`, `pre_req_id`, `course_id`) VALUES ( NULL, 'C4410','MGT3000');*/
-/*======END======INSERT INTO PRE REQ TABLE CIS SPECIFIC REQUIREMENTS======END======*/
 
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3300' WHERE `table_key`= '32';
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3300' WHERE `table_key`= '33';
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3300' WHERE `table_key`= '34';
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3300' WHERE `table_key`= '35';
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3300' WHERE `table_key`= '36';
 
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3320' WHERE `table_key`= '37';
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3320' WHERE `table_key`= '38';
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3320' WHERE `table_key`= '39';
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3320' WHERE `table_key`= '40';
-UPDATE `PreReq` SET `pre_req_id`= 'CIS3320' WHERE `table_key`= '41';
 
-UPDATE `PreReq` SET `pre_req_id`= 'FIN3300' WHERE `table_key`= '42';
-UPDATE `PreReq` SET `pre_req_id`= 'FIN3300' WHERE `table_key`= '43';
-UPDATE `PreReq` SET `pre_req_id`= 'FIN3300' WHERE `table_key`= '44';
-UPDATE `PreReq` SET `pre_req_id`= 'FIN3300' WHERE `table_key`= '45';
-UPDATE `PreReq` SET `pre_req_id`= 'FIN3300' WHERE `table_key`= '46';
-UPDATE `PreReq` SET `pre_req_id`= 'FIN3300' WHERE `table_key`= '47';
-UPDATE `PreReq` SET `pre_req_id`= 'FIN3300' WHERE `table_key`= '48';
-UPDATE `PreReq` SET `pre_req_id`= 'FIN3300' WHERE `table_key`= '49';
 
-UPDATE `PreReq` SET `pre_req_id`= 'MGT3000' WHERE `table_key`= '50';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT3000' WHERE `table_key`= '51';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT3000' WHERE `table_key`= '52';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT3000' WHERE `table_key`= '53';
 
-UPDATE `PreReq` SET `pre_req_id`= 'MKT3000' WHERE `table_key`= '54';
-UPDATE `PreReq` SET `pre_req_id`= 'MKT3000' WHERE `table_key`= '55';
-UPDATE `PreReq` SET `pre_req_id`= 'MKT3000' WHERE `table_key`= '56';
-UPDATE `PreReq` SET `pre_req_id`= 'MKT3000' WHERE `table_key`= '57';
 
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '58';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '59';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '60';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '61';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '62';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '63';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '64';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '65';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '66';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '67';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '68';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '69';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '70';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '71';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '72';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '73';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '74';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '75';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '76';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '77';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '78';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '79';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '80';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '81';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '82';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '83';
-UPDATE `PreReq` SET `pre_req_id`= 'MGT4950' WHERE `table_key`= '84';
+
+
+
+
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS2110';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3050';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3060';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3145';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3230';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS4050';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3030';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3220';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3270';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3280';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3290';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3460';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3490';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3500';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS3980';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS4030';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS4060';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS4160';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS4260';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS4280';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS4281';
+UPDATE `Courses` SET `cis_major` = 'CIS' WHERE `course_id` = 'CIS4410';
+
+
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3090';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3300';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3400';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3510';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3520';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC4200';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3100';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3110';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3200';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3750';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC3980';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC4510';
+UPDATE `Courses` SET `acc_major` = 'ACC' WHERE `course_id` = 'ACC490C';
+
+
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3010';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3310';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3710';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT4560';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3100';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3110';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3120';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3140';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3160';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3250';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3300';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3410';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3500';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3550';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3610';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3750';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3810';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3910';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT3980';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT4110';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT4250';
+UPDATE `Courses` SET `mkt_major` = 'MKT' WHERE `course_id` = 'MKT4520';
+
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN3010';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN3150';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN3600';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN3850';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN3100';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN3320';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN3420';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN3450';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN4200';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN4400';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN4500';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN4600';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN4750';
+UPDATE `Courses` SET `fin_major` = 'FIN' WHERE `course_id` = 'FIN4950';
+
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT3020';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT3220';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT3530';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT3550';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT3820';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4530';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT3230';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT3240';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4030';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4050';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4420';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4550';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4610';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4620';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4640';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4830';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4850';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT390A';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT490C';
+UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT490D';

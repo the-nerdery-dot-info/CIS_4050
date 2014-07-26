@@ -1,0 +1,948 @@
+<!doctype html>
+<html>
+<head>
+<!--Author: Garrett, Jarrett, Reece
+    Date:   06/24/14
+    Purpose: To create an information system for students and advisors to interact and map a degree path.
+    -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>MSU Student Advising Portal</title>
+<link href="css/profilelayout.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="assets/lou-multi-select-5839faf/css/multi-select.css" rel="stylesheet" type="text/css" media="screen"/>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script src="../CIS_4050/assets/lou-multi-select-5839faf/js/jquery.multi-select.js"></script>
+
+<script type="text/javascript">
+//instance for multiselect list by department
+    $(document).ready(function(){
+        $('#my-select-cis').multiSelect();
+        $('#my-select-mgt').multiSelect();
+        $('#my-select-mkt').multiSelect();
+        $('#my-select-fin').multiSelect();
+        $('#my-select-acc').multiSelect();
+
+//Deselect ALL of the courses to start over
+        $('#deselect-all1').click(function(){
+            $('#my-select-cis').multiSelect('deselect_all');
+        return false;
+        });
+        $('#deselect-all2').click(function(){
+            $('#my-select-mgt').multiSelect('deselect_all');
+        return false;
+        });
+        $('#deselect-all3').click(function(){
+            $('#my-select-mkt').multiSelect('deselect_all');
+        return false;
+        });
+        $('#deselect-all4').click(function(){
+            $('#my-select-fin').multiSelect('deselect_all');
+        return false;
+        });
+        $('#deselect-all5').click(function(){
+            $('#my-select-acc').multiSelect('deselect_all');
+        return false;
+        });
+
+
+//Disable course if only set about of options allowed
+    $('#my-select-cis').bind('change', function(){
+        //Ddeclare variable to read random id's better
+        var PHI1030 = "li #116073869-selectable";
+        var PHI3360 = "li #116136427-selectable";
+        var PSY1001 = "li #445770774-selectable";
+        var SOC1010 = "li #-1321519515-selectable";
+        var PSC1010 = "li #425453342-selectable";
+        var PSC1020 = "li #425453373-selectable";
+
+        //disable /enable PHI1030, PHI3360
+        if( $(PHI1030).hasClass('ms-selected') ){
+            $(PHI3360).addClass('disabled');
+        }else{
+            $(PHI3360).removeClass('disabled');
+        }
+        if( $(PHI3360).hasClass('ms-selected') ){
+            $(PHI1030).addClass('disabled');
+        }else{
+            $(PHI1030).removeClass('disabled');
+        }
+        //END======disable /enable PHI1030, PHI3360
+        //disable /enable PSY1001, SOC1010
+        if( $(PSC1010).hasClass('ms-selected') ){
+            $(PSC1020).addClass('disabled');
+        }else{
+            $(PSC1020).removeClass('disabled');
+        }
+        if( $(PSC1020).hasClass('ms-selected') ){
+            $(PSC1010).addClass('disabled');
+        }else{
+            $(PSC1010).removeClass('disabled');
+        }
+        //END========disable /enable PSY1001, SOC1010
+        if( $(PSY1001).hasClass('ms-selected') ){
+            $(SOC1010).addClass('disabled');
+        }else{
+            $(SOC1010).removeClass('disabled');
+        }
+        if( $(SOC1010).hasClass('ms-selected') ){
+            $(PSY1001).addClass('disabled');
+        }else{
+            $(PSY1001).removeClass('disabled');
+        }
+        //END======disable /enable PSC1010, PSC1020
+    });
+$('#my-select-cis').bind('change', function(){
+        //Ddeclare variable to read random id's better
+        var PHI1030 = "li #116073869-selectable";
+        var PHI3360 = "li #116136427-selectable";
+        var PSY1001 = "li #445770774-selectable";
+        var SOC1010 = "li #-1321519515-selectable";
+        var PSC1010 = "li #425453342-selectable";
+        var PSC1020 = "li #425453373-selectable";
+
+        //disable /enable PHI1030, PHI3360
+        if( $(PHI1030).hasClass('ms-selected') ){
+            $(PHI3360).addClass('disabled');
+        }else{
+            $(PHI3360).removeClass('disabled');
+        }
+        if( $(PHI3360).hasClass('ms-selected') ){
+            $(PHI1030).addClass('disabled');
+        }else{
+            $(PHI1030).removeClass('disabled');
+        }
+        //END======disable /enable PHI1030, PHI3360
+        //disable /enable PSY1001, SOC1010
+        if( $(PSC1010).hasClass('ms-selected') ){
+            $(PSC1020).addClass('disabled');
+        }else{
+            $(PSC1020).removeClass('disabled');
+        }
+        if( $(PSC1020).hasClass('ms-selected') ){
+            $(PSC1010).addClass('disabled');
+        }else{
+            $(PSC1010).removeClass('disabled');
+        }
+        //END========disable /enable PSY1001, SOC1010
+        if( $(PSY1001).hasClass('ms-selected') ){
+            $(SOC1010).addClass('disabled');
+        }else{
+            $(SOC1010).removeClass('disabled');
+        }
+        if( $(SOC1010).hasClass('ms-selected') ){
+            $(PSY1001).addClass('disabled');
+        }else{
+            $(PSY1001).removeClass('disabled');
+        }
+        //END======disable /enable PSC1010, PSC1020
+    });
+$('#my-select-mkt').bind('change', function(){
+        //Ddeclare variable to read random id's better
+        var PHI1030 = "li #116073869-selectable";
+        var PHI3360 = "li #116136427-selectable";
+        var PSY1001 = "li #445770774-selectable";
+        var SOC1010 = "li #-1321519515-selectable";
+        var PSC1010 = "li #425453342-selectable";
+        var PSC1020 = "li #425453373-selectable";
+
+        //disable /enable PHI1030, PHI3360
+        if( $(PHI1030).hasClass('ms-selected') ){
+            $(PHI3360).addClass('disabled');
+        }else{
+            $(PHI3360).removeClass('disabled');
+        }
+        if( $(PHI3360).hasClass('ms-selected') ){
+            $(PHI1030).addClass('disabled');
+        }else{
+            $(PHI1030).removeClass('disabled');
+        }
+        //END======disable /enable PHI1030, PHI3360
+        //disable /enable PSY1001, SOC1010
+        if( $(PSC1010).hasClass('ms-selected') ){
+            $(PSC1020).addClass('disabled');
+        }else{
+            $(PSC1020).removeClass('disabled');
+        }
+        if( $(PSC1020).hasClass('ms-selected') ){
+            $(PSC1010).addClass('disabled');
+        }else{
+            $(PSC1010).removeClass('disabled');
+        }
+        //END========disable /enable PSY1001, SOC1010
+        if( $(PSY1001).hasClass('ms-selected') ){
+            $(SOC1010).addClass('disabled');
+        }else{
+            $(SOC1010).removeClass('disabled');
+        }
+        if( $(SOC1010).hasClass('ms-selected') ){
+            $(PSY1001).addClass('disabled');
+        }else{
+            $(PSY1001).removeClass('disabled');
+        }
+        //END======disable /enable PSC1010, PSC1020
+    });
+$('#my-select-mgt').bind('change', function(){
+        //Ddeclare variable to read random id's better
+        var PHI1030 = "li #116073869-selectable";
+        var PHI3360 = "li #116136427-selectable";
+        var PSY1001 = "li #445770774-selectable";
+        var SOC1010 = "li #-1321519515-selectable";
+        var PSC1010 = "li #425453342-selectable";
+        var PSC1020 = "li #425453373-selectable";
+
+        //disable /enable PHI1030, PHI3360
+        if( $(PHI1030).hasClass('ms-selected') ){
+            $(PHI3360).addClass('disabled');
+        }else{
+            $(PHI3360).removeClass('disabled');
+        }
+        if( $(PHI3360).hasClass('ms-selected') ){
+            $(PHI1030).addClass('disabled');
+        }else{
+            $(PHI1030).removeClass('disabled');
+        }
+        //END======disable /enable PHI1030, PHI3360
+        //disable /enable PSY1001, SOC1010
+        if( $(PSC1010).hasClass('ms-selected') ){
+            $(PSC1020).addClass('disabled');
+        }else{
+            $(PSC1020).removeClass('disabled');
+        }
+        if( $(PSC1020).hasClass('ms-selected') ){
+            $(PSC1010).addClass('disabled');
+        }else{
+            $(PSC1010).removeClass('disabled');
+        }
+        //END========disable /enable PSY1001, SOC1010
+        if( $(PSY1001).hasClass('ms-selected') ){
+            $(SOC1010).addClass('disabled');
+        }else{
+            $(SOC1010).removeClass('disabled');
+        }
+        if( $(SOC1010).hasClass('ms-selected') ){
+            $(PSY1001).addClass('disabled');
+        }else{
+            $(PSY1001).removeClass('disabled');
+        }
+        //END======disable /enable PSC1010, PSC1020
+    });
+$('#my-select-fin').bind('change', function(){
+        //Ddeclare variable to read random id's better
+        var PHI1030 = "li #116073869-selectable";
+        var PHI3360 = "li #116136427-selectable";
+        var PSY1001 = "li #445770774-selectable";
+        var SOC1010 = "li #-1321519515-selectable";
+        var PSC1010 = "li #425453342-selectable";
+        var PSC1020 = "li #425453373-selectable";
+
+        //disable /enable PHI1030, PHI3360
+        if( $(PHI1030).hasClass('ms-selected') ){
+            $(PHI3360).addClass('disabled');
+        }else{
+            $(PHI3360).removeClass('disabled');
+        }
+        if( $(PHI3360).hasClass('ms-selected') ){
+            $(PHI1030).addClass('disabled');
+        }else{
+            $(PHI1030).removeClass('disabled');
+        }
+        //END======disable /enable PHI1030, PHI3360
+        //disable /enable PSY1001, SOC1010
+        if( $(PSC1010).hasClass('ms-selected') ){
+            $(PSC1020).addClass('disabled');
+        }else{
+            $(PSC1020).removeClass('disabled');
+        }
+        if( $(PSC1020).hasClass('ms-selected') ){
+            $(PSC1010).addClass('disabled');
+        }else{
+            $(PSC1010).removeClass('disabled');
+        }
+        //END========disable /enable PSY1001, SOC1010
+        if( $(PSY1001).hasClass('ms-selected') ){
+            $(SOC1010).addClass('disabled');
+        }else{
+            $(SOC1010).removeClass('disabled');
+        }
+        if( $(SOC1010).hasClass('ms-selected') ){
+            $(PSY1001).addClass('disabled');
+        }else{
+            $(PSY1001).removeClass('disabled');
+        }
+        //END======disable /enable PSC1010, PSC1020
+    });
+$('#my-select-acc').bind('change', function(){
+        //Ddeclare variable to read random id's better
+        var PHI1030 = "li #116073869-selectable";
+        var PHI3360 = "li #116136427-selectable";
+        var PSY1001 = "li #445770774-selectable";
+        var SOC1010 = "li #-1321519515-selectable";
+        var PSC1010 = "li #425453342-selectable";
+        var PSC1020 = "li #425453373-selectable";
+
+        //disable /enable PHI1030, PHI3360
+        if( $(PHI1030).hasClass('ms-selected') ){
+            $(PHI3360).addClass('disabled');
+        }else{
+            $(PHI3360).removeClass('disabled');
+        }
+        if( $(PHI3360).hasClass('ms-selected') ){
+            $(PHI1030).addClass('disabled');
+        }else{
+            $(PHI1030).removeClass('disabled');
+        }
+        //END======disable /enable PHI1030, PHI3360
+        //disable /enable PSY1001, SOC1010
+        if( $(PSC1010).hasClass('ms-selected') ){
+            $(PSC1020).addClass('disabled');
+        }else{
+            $(PSC1020).removeClass('disabled');
+        }
+        if( $(PSC1020).hasClass('ms-selected') ){
+            $(PSC1010).addClass('disabled');
+        }else{
+            $(PSC1010).removeClass('disabled');
+        }
+        //END========disable /enable PSY1001, SOC1010
+        if( $(PSY1001).hasClass('ms-selected') ){
+            $(SOC1010).addClass('disabled');
+        }else{
+            $(SOC1010).removeClass('disabled');
+        }
+        if( $(SOC1010).hasClass('ms-selected') ){
+            $(PSY1001).addClass('disabled');
+        }else{
+            $(PSY1001).removeClass('disabled');
+        }
+        //END======disable /enable PSC1010, PSC1020
+    });
+//========================================================
+//toggle through department if select list changes
+    $('#departments').bind('change', function(){
+            //CIS department select menu
+        if( $("#departments").val() == 'cis') {
+            $("#cis-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+        }else{
+            $("#cis-wrap").hide( "drop" , {direction: "left"}, 1200 );
+        }
+        //MGT department select menu
+        if( $("#departments").val() == 'mgt' ){
+            $("#mgt-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+        }else{
+            $("#mgt-wrap").hide( "drop" , {direction: "left"}, 1200 );
+        }
+        //MKT department select menu
+        if( $("#departments").val() == 'mkt' ){
+            $("#mkt-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+        }else{
+            $("#mkt-wrap").hide( "drop" , {direction: "left"}, 1200 );
+        }
+        //FIN department select menu
+        if( $("#departments").val() == 'fin' ){
+            $("#fin-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+        }else{
+            $("#fin-wrap").hide( "drop" , {direction: "left"}, 1200 );
+        }
+        //ACC department select menu
+        if( $("#departments").val() == 'acc' ){
+            $("#acc-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+        }else{
+            $("#acc-wrap").hide( "drop" , {direction: "left"}, 1200 );
+        }
+    });
+//========================================================
+
+
+    });
+
+</script>
+
+</head>
+<body>
+    <div id="wrapper2">
+    <h1>MSU Denver School of Business Advising Portal</h1>
+    <h2><em>Please <a href="https://connectu.msudenver.edu/cp/home/displaylogin">click here</a> to log into your ConnectU account and print a current CAPP report in order to accurately complete this form.</em></h2>
+   <!--radio buttons for student to select department which will trigger different select lists-->
+
+    <form action="degree-builder.php" method="post">
+        <div id="wrap-center">
+            <fieldset>
+            <legend>Tell us a little bit about yourself.</legend>
+            <input type="text" placeholder="Student ID (900 Number)" name="student_id"/>
+            <input type="text" placeholder="First Name" name="student_fname"/>
+            <input type="text" placeholder="Last Name" name="student_lname"/>
+            <input type="text" placeholder="Phone Number" name="student_phone"/>
+            <input type="text" placeholder="Email" name="student_email"/>
+            </fieldset>
+        </div>
+     <select name="departments" id="departments" class="departments">
+          <p>Please select a department</p>
+           <option value="default" selected>Please choose a department</option>
+            <option name="cis" value="cis">Computer Information Systems</option>
+            <option name="mgt" value="mgt">Management</option>
+            <option name="mkt" value="mkt">Marketing</option>
+            <option name="fin" value="fin">Finance</option>
+            <option name="acc" value="acc">Accounting</option>
+    </select>
+           <div id="wrap-center-multiselect">
+            <!--multiselect list for cis department-->
+            <div id="cis-wrap">
+            <legend>Please select the courses you have taken for your Computer Information Systems degree.</legend>
+            <select multiple="multiple" id="my-select-cis" name="my-select[]">
+                    <optgroup label='<strong>GENERAL STUDIES REQUIREMENTS</strong>'>
+                        <option value="ENG1010">ENG1010</option>
+                        <option value="ENG1020">ENG1020</option>
+                        <option value="MTH1310">MTH1310</option>
+                        <option value="SPE1010">SPE1010</option>
+                        <option value="ECO2010">ECO2010</option>
+                        <option value="ECO2020">ECO2020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Any History and Arts &amp; Humanities course will satisfy the HIS and ART requirement.</em></small>">
+                        <option value="HIS1010">HIS1010</option>
+                        <option value="ART1010">ART1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PHI1030 or PHI3360. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PHI1030">PHI1030</option>
+                        <option value="PHI3360">PHI3360</option>
+
+                    </optgroup>
+                    <optgroup label="<small><em>Any two Natural Science Courses will fill the NAT requirements. Select both NAT courses if you have taken two of ANY Natural Science courses.</em></small>">
+                        <option value="NAT1010">NAT1010</option>
+                        <option value="NAT1020">NAT1020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Global Diversity and Multicultural Requirements are defined by Major. Select the GLB and/or MLT course if you have taken a course that satisfies the requirement. If you are unsure, please contact an advisor in your department.</em></small>">
+                        <option value="GLB1010">GLB1010</option>
+                        <option value="MLT1010">MLT1010</option>
+                    </optgroup>
+                  <optgroup label='<strong>BUSINESS CORE REQUIREMENTS</strong>'>
+                        <option value="ACC2010">ACC2010</option>
+                        <option value="ACC2020">ACC2020</option>
+                        <option value="CIS1010">CIS1010</option>
+                        <option value="CIS2010">CIS2010</option>
+                        <option value="CIS3300">CIS3300</option>
+                        <option value="CIS3320">CIS3320</option>
+                        <option value="MGT2210">MGT2210</option>
+                        <option value="MKT2040">MKT2040</option>
+                        <option value="FIN3300">FIN3300</option>
+                        <option value="MGT3000">MGT3000</option>
+                        <option value="MKT3000">MKT3000</option>
+                        <option value="MGT4950">MGT4950</option>
+                  </optgroup>
+                  <optgroup label='<strong>ADDITIONAL SCHOOL OF BUSINESS REQUIREMENTS</strong>'>
+                   <option value="MTH1320">MTH1320</option>
+                  </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSY1001 or SOC1010. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSY1001">PSY1001</option>
+                        <option value="SOC1010">SOC1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSC1010 or PSC1020. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSC1010">PSC1010</option>
+                        <option value="PSC1020">PSC1020</option>
+                    </optgroup>
+                  <optgroup label='<strong>CIS Major Courses</strong>'>
+                        <option value="CIS2110">CIS2110</option>
+                        <option value="CIS3050">CIS3050</option>
+                        <option value="CIS3060">CIS3060</option>
+                        <option value="CIS3145">CIS3145</option>
+                        <option value="CIS3230">CIS3230</option>
+                        <option value="CIS4050">CIS4050</option>
+                  </optgroup>
+                  <optgroup label='<strong>CIS APPROVED UPPER LEVEL ELECTIVES </strong><small><em>Select only TWO. Indicate any additional courses from here in the "ADDITIONAL ELECTIVES" section below.</em></small>'>
+                        <option value="CIS3030">CIS3030</option>
+                        <option value="CIS3220">CIS3220</option>
+                        <option value="CIS3270">CIS3270</option>
+                        <option value="CIS3280">CIS3280</option>
+                        <option value="CIS3290">CIS3290</option>
+                        <option value="CIS3460">CIS3460</option>
+                        <option value="CIS3490">CIS3490</option>
+                        <option value="CIS3500">CIS3500</option>
+                        <option value="CIS3980">CIS3980</option>
+                    <optgroup label='<strong>CIS CAPSTONE GROUP </strong><small><em>Select only ONE. Indicate any additional courses from here in the "ADDITIONAL ELECTIVES" section below.</em></small>'>
+                        <option value="CIS4030">CIS4030</option>
+                        <option value="CIS4060">CIS4060</option>
+                        <option value="CIS4160">CIS4160</option>
+                        <option value="CIS4260">CIS4260</option>
+                        <option value="CIS4280">CIS4280</option>
+                        <option value="CIS4281">CIS4281</option>
+                        <option value="CIS4410">CIS4410</option>
+                  </optgroup>
+                  <optgroup label='<strong>ADDITIONAL ELECTIVES </strong><small><em>CIS Department Requires 17</em></small>'>
+                        <option value="ELC1001">One Credit Hour Elective</option>
+                        <option value="ELC2001">One Credit Hour Elective</option>
+                        <option value="ELC3001">One Credit Hour Elective</option>
+                        <option value="ELC4001">One Credit Hour Elective</option>
+                        <option value="ELC5001">One Credit Hour Elective</option>
+                        <option value="ELC6001">One Credit Hour Elective</option>
+                        <option value="ELC7001">One Credit Hour Elective</option>
+                        <option value="ELC8001">One Credit Hour Elective</option>
+                        <option value="ELC9001">One Credit Hour Elective</option>
+                        <option value="ELC1003">Three Credit Hour Elective</option>
+                        <option value="ELC2003">Three Credit Hour Elective</option>
+                        <option value="ELC3003">Three Credit Hour Elective</option>
+                        <option value="ELC4003">Three Credit Hour Elective</option>
+                        <option value="ELC5003">Three Credit Hour Elective</option>
+                        <option value="ELC6003">Three Credit Hour Elective</option>
+                        <option value="ELC7003">Three Credit Hour Elective</option>
+                        <option value="ELC8003">Three Credit Hour Elective</option>
+                        <option value="ELC9003">Three Credit Hour Elective</option>
+                        <option value="ELC1004">Four Credit Hour Elective</option>
+                        <option value="ELC2004">Four Credit Hour Elective</option>
+                        <option value="ELC3004">Four Credit Hour Elective</option>
+                        <option value="ELC4004">Four Credit Hour Elective</option>
+                        <option value="ELC5004">Four Credit Hour Elective</option>
+                        <option value="ELC6004">Four Credit Hour Elective</option>
+                        <option value="ELC7004">Four Credit Hour Elective</option>
+                        <option value="ELC8004">Four Credit Hour Elective</option>
+                        <option value="ELC9004">Four Credit Hour Elective</option>
+                  </optgroup>
+            </select>
+            <!--Anchor to deselct multi select-->
+            <a href="#" id="deselect-all1" title="Deselect All attributes">Start over <small>&#40;This will remove all selected Items&#41;</small></a>
+            </div>
+            <!--end multiselect list for cis department-->
+             <!--multiselect list for mgt department-->
+            <div id="mgt-wrap">
+            <legend>Please select the courses you have taken for your Management degree.</legend>
+            <select multiple="multiple" id="my-select-mgt" name="my-select[]">
+                   <!--BEGIN SOB/GENED courses-->
+                     <optgroup label='<strong>GENERAL STUDIES REQUIREMENTS</strong>'>
+                        <option value="ENG1010">ENG1010</option>
+                        <option value="ENG1020">ENG1020</option>
+                        <option value="MTH1310">MTH1310</option>
+                        <option value="SPE1010">SPE1010</option>
+                        <option value="ECO2010">ECO2010</option>
+                        <option value="ECO2020">ECO2020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Any History and Arts &amp; Humanities course will satisfy the HIS and ART requirement.</em></small>">
+                        <option value="HIS1010">HIS1010</option>
+                        <option value="ART1010">ART1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PHI1030 or PHI3360. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PHI1030">PHI1030</option>
+                        <option value="PHI3360">PHI3360</option>
+
+                    </optgroup>
+                    <optgroup label="<small><em>Any two Natural Science Courses will fill the NAT requirements. Select both NAT courses if you have taken two of ANY Natural Science courses.</em></small>">
+                        <option value="NAT1010">NAT1010</option>
+                        <option value="NAT1020">NAT1020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Global Diversity and Multicultural Requirements are defined by Major. Select the GLB and/or MLT course if you have taken a course that satisfies the requirement. If you are unsure, please contact an advisor in your department.</em></small>">
+                        <option value="GLB1010">GLB1010</option>
+                        <option value="MLT1010">MLT1010</option>
+                    </optgroup>
+                  <optgroup label='<strong>BUSINESS CORE REQUIREMENTS</strong>'>
+                        <option value="ACC2010">ACC2010</option>
+                        <option value="ACC2020">ACC2020</option>
+                        <option value="CIS1010">CIS1010</option>
+                        <option value="CIS2010">CIS2010</option>
+                        <option value="CIS3300">CIS3300</option>
+                        <option value="CIS3320">CIS3320</option>
+                        <option value="MGT2210">MGT2210</option>
+                        <option value="MKT2040">MKT2040</option>
+                        <option value="FIN3300">FIN3300</option>
+                        <option value="MGT3000">MGT3000</option>
+                        <option value="MKT3000">MKT3000</option>
+                        <option value="MGT4950">MGT4950</option>
+                  </optgroup>
+                  <optgroup label='<strong>ADDITIONAL SCHOOL OF BUSINESS REQUIREMENTS</strong>'>
+                   <option value="MTH1320">MTH1320</option>
+                  </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSY1001 or SOC1010. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSY1001">PSY1001</option>
+                        <option value="SOC1010">SOC1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSC1010 or PSC1020. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSC1010">PSC1010</option>
+                        <option value="PSC1020">PSC1020</option>
+                    </optgroup>
+                <!--END SOB/GEN ED courses-->
+                  <optgroup label='MGT Courses'>
+                        <option value="MGT3020">MGT3020</option>
+                        <option value="MGT3220">MGT3220</option>
+                        <option value="MGT3230">MGT3230</option>
+                        <option value="MGT3240">MGT3240</option>
+                        <option value="MGT3530">MGT3530</option>
+                        <option value="MGT3550">MGT3550</option>
+                        <option value="MGT3820">MGT3820</option>
+                        <option value="MGT390A">MGT390A</option>
+                        <option value="MGT4030">MGT4030</option>
+                        <option value="MGT4050">MGT4050</option>
+                        <option value="MGT4420">MGT4420</option>
+                        <option value="MGT4530">MGT4530</option>
+                        <option value="MGT4550">MGT4550</option>
+                        <option value="MGT4610">MGT4610</option>
+                        <option value="MGT4620">MGT4620</option>
+                        <option value="MGT4640">MGT4640</option>
+                        <option value="MGT4830">MGT4830</option>
+                        <option value="MGT4850">MGT4850</option>
+                        <option value="MGT490C">MGT490C</option>
+                        <option value="MGT490D">MGT490D</option>
+                  </optgroup>
+                 <optgroup label='<strong>ADDITIONAL ELECTIVES </strong><small><em>CIS Department Requires 17</em></small>'>
+                        <option value="ELC1001">One Credit Hour Elective</option>
+                        <option value="ELC2001">One Credit Hour Elective</option>
+                        <option value="ELC3001">One Credit Hour Elective</option>
+                        <option value="ELC4001">One Credit Hour Elective</option>
+                        <option value="ELC5001">One Credit Hour Elective</option>
+                        <option value="ELC6001">One Credit Hour Elective</option>
+                        <option value="ELC7001">One Credit Hour Elective</option>
+                        <option value="ELC8001">One Credit Hour Elective</option>
+                        <option value="ELC9001">One Credit Hour Elective</option>
+                        <option value="ELC1003">Three Credit Hour Elective</option>
+                        <option value="ELC2003">Three Credit Hour Elective</option>
+                        <option value="ELC3003">Three Credit Hour Elective</option>
+                        <option value="ELC4003">Three Credit Hour Elective</option>
+                        <option value="ELC5003">Three Credit Hour Elective</option>
+                        <option value="ELC6003">Three Credit Hour Elective</option>
+                        <option value="ELC7003">Three Credit Hour Elective</option>
+                        <option value="ELC8003">Three Credit Hour Elective</option>
+                        <option value="ELC9003">Three Credit Hour Elective</option>
+                        <option value="ELC1004">Four Credit Hour Elective</option>
+                        <option value="ELC2004">Four Credit Hour Elective</option>
+                        <option value="ELC3004">Four Credit Hour Elective</option>
+                        <option value="ELC4004">Four Credit Hour Elective</option>
+                        <option value="ELC5004">Four Credit Hour Elective</option>
+                        <option value="ELC6004">Four Credit Hour Elective</option>
+                        <option value="ELC7004">Four Credit Hour Elective</option>
+                        <option value="ELC8004">Four Credit Hour Elective</option>
+                        <option value="ELC9004">Four Credit Hour Elective</option>
+                  </optgroup>
+            </select>
+            <!--Anchor to deselct multi select-->
+            <a href="#" id="deselect-all2" title="Deselect All attributes">Start over <small>&#40;This will remove all selected Items&#41;</small></a>
+            </div>
+            <!--end multiselect list for mgt department-->
+             <!--multiselect list for mkt department-->
+            <div id="mkt-wrap">
+            <legend>Please select the courses you have taken for your Marketing degree.</legend>
+            <select multiple="multiple" id="my-select-mkt" name="my-select[]">
+<!--BEGIN SOB/GENED courses-->
+                     <optgroup label='<strong>GENERAL STUDIES REQUIREMENTS</strong>'>
+                        <option value="ENG1010">ENG1010</option>
+                        <option value="ENG1020">ENG1020</option>
+                        <option value="MTH1310">MTH1310</option>
+                        <option value="SPE1010">SPE1010</option>
+                        <option value="ECO2010">ECO2010</option>
+                        <option value="ECO2020">ECO2020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Any History and Arts &amp; Humanities course will satisfy the HIS and ART requirement.</em></small>">
+                        <option value="HIS1010">HIS1010</option>
+                        <option value="ART1010">ART1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PHI1030 or PHI3360. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PHI1030">PHI1030</option>
+                        <option value="PHI3360">PHI3360</option>
+
+                    </optgroup>
+                    <optgroup label="<small><em>Any two Natural Science Courses will fill the NAT requirements. Select both NAT courses if you have taken two of ANY Natural Science courses.</em></small>">
+                        <option value="NAT1010">NAT1010</option>
+                        <option value="NAT1020">NAT1020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Global Diversity and Multicultural Requirements are defined by Major. Select the GLB and/or MLT course if you have taken a course that satisfies the requirement. If you are unsure, please contact an advisor in your department.</em></small>">
+                        <option value="GLB1010">GLB1010</option>
+                        <option value="MLT1010">MLT1010</option>
+                    </optgroup>
+                  <optgroup label='<strong>BUSINESS CORE REQUIREMENTS</strong>'>
+                        <option value="ACC2010">ACC2010</option>
+                        <option value="ACC2020">ACC2020</option>
+                        <option value="CIS1010">CIS1010</option>
+                        <option value="CIS2010">CIS2010</option>
+                        <option value="CIS3300">CIS3300</option>
+                        <option value="CIS3320">CIS3320</option>
+                        <option value="MGT2210">MGT2210</option>
+                        <option value="MKT2040">MKT2040</option>
+                        <option value="FIN3300">FIN3300</option>
+                        <option value="MGT3000">MGT3000</option>
+                        <option value="MKT3000">MKT3000</option>
+                        <option value="MGT4950">MGT4950</option>
+                  </optgroup>
+                  <optgroup label='<strong>ADDITIONAL SCHOOL OF BUSINESS REQUIREMENTS</strong>'>
+                   <option value="MTH1320">MTH1320</option>
+                  </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSY1001 or SOC1010. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSY1001">PSY1001</option>
+                        <option value="SOC1010">SOC1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSC1010 or PSC1020. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSC1010">PSC1010</option>
+                        <option value="PSC1020">PSC1020</option>
+                    </optgroup>
+                <!--END SOB/GEN ED courses-->
+                  <optgroup label='MKT Courses'>
+                        <option value="MKT3010">MKT3010</option>
+                        <option value="MKT3100">MKT3100</option>
+                        <option value="MKT3110">MKT3110</option>
+                        <option value="MKT3120">MKT3120</option>
+                        <option value="MKT3140">MKT3140</option>
+                        <option value="MKT3160">MKT3160</option>
+                        <option value="MKT3250">MKT3250</option>
+                        <option value="MKT3300">MKT3300</option>
+                        <option value="MKT3310">MKT3310</option>
+                        <option value="MKT3410">MKT3410</option>
+                        <option value="MKT3500">MKT3500</option>
+                        <option value="MKT3550">MKT3550</option>
+                        <option value="MKT3610">MKT3610</option>
+                        <option value="MKT3710">MKT3710</option>
+                        <option value="MKT3750">MKT3750</option>
+                        <option value="MKT3810">MKT3810</option>
+                        <option value="MKT3910">MKT3910</option>
+                        <option value="MKT3980">MKT3980</option>
+                        <option value="MKT4110">MKT4110</option>
+                        <option value="MKT4250">MKT4250</option>
+                        <option value="MKT4520">MKT4520</option>
+                        <option value="MKT4560">MKT4560</option>
+                  </optgroup>
+                   <optgroup label='<strong>ADDITIONAL ELECTIVES </strong><small><em>CIS Department Requires 17</em></small>'>
+                        <option value="ELC1001">One Credit Hour Elective</option>
+                        <option value="ELC2001">One Credit Hour Elective</option>
+                        <option value="ELC3001">One Credit Hour Elective</option>
+                        <option value="ELC4001">One Credit Hour Elective</option>
+                        <option value="ELC5001">One Credit Hour Elective</option>
+                        <option value="ELC6001">One Credit Hour Elective</option>
+                        <option value="ELC7001">One Credit Hour Elective</option>
+                        <option value="ELC8001">One Credit Hour Elective</option>
+                        <option value="ELC9001">One Credit Hour Elective</option>
+                        <option value="ELC1003">Three Credit Hour Elective</option>
+                        <option value="ELC2003">Three Credit Hour Elective</option>
+                        <option value="ELC3003">Three Credit Hour Elective</option>
+                        <option value="ELC4003">Three Credit Hour Elective</option>
+                        <option value="ELC5003">Three Credit Hour Elective</option>
+                        <option value="ELC6003">Three Credit Hour Elective</option>
+                        <option value="ELC7003">Three Credit Hour Elective</option>
+                        <option value="ELC8003">Three Credit Hour Elective</option>
+                        <option value="ELC9003">Three Credit Hour Elective</option>
+                        <option value="ELC1004">Four Credit Hour Elective</option>
+                        <option value="ELC2004">Four Credit Hour Elective</option>
+                        <option value="ELC3004">Four Credit Hour Elective</option>
+                        <option value="ELC4004">Four Credit Hour Elective</option>
+                        <option value="ELC5004">Four Credit Hour Elective</option>
+                        <option value="ELC6004">Four Credit Hour Elective</option>
+                        <option value="ELC7004">Four Credit Hour Elective</option>
+                        <option value="ELC8004">Four Credit Hour Elective</option>
+                        <option value="ELC9004">Four Credit Hour Elective</option>
+                  </optgroup>
+            </select>
+            <!--Anchor to deselct multi select-->
+            <a href="#" id="deselect-all3" title="Deselect All attributes">Start over <small>&#40;This will remove all selected Items&#41;</small></a>
+             </div>
+            <!--end multiselect list for mkt department-->
+             <!--multiselect list for fin department-->
+            <div id="fin-wrap">
+            <legend>Please select the courses you have taken for your Finance degree.</legend>
+            <select multiple="multiple" id="my-select-fin" name="my-select[]">
+<!--BEGIN SOB/GENED courses-->
+                     <optgroup label='<strong>GENERAL STUDIES REQUIREMENTS</strong>'>
+                        <option value="ENG1010">ENG1010</option>
+                        <option value="ENG1020">ENG1020</option>
+                        <option value="MTH1310">MTH1310</option>
+                        <option value="SPE1010">SPE1010</option>
+                        <option value="ECO2010">ECO2010</option>
+                        <option value="ECO2020">ECO2020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Any History and Arts &amp; Humanities course will satisfy the HIS and ART requirement.</em></small>">
+                        <option value="HIS1010">HIS1010</option>
+                        <option value="ART1010">ART1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PHI1030 or PHI3360. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PHI1030">PHI1030</option>
+                        <option value="PHI3360">PHI3360</option>
+
+                    </optgroup>
+                    <optgroup label="<small><em>Any two Natural Science Courses will fill the NAT requirements. Select both NAT courses if you have taken two of ANY Natural Science courses.</em></small>">
+                        <option value="NAT1010">NAT1010</option>
+                        <option value="NAT1020">NAT1020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Global Diversity and Multicultural Requirements are defined by Major. Select the GLB and/or MLT course if you have taken a course that satisfies the requirement. If you are unsure, please contact an advisor in your department.</em></small>">
+                        <option value="GLB1010">GLB1010</option>
+                        <option value="MLT1010">MLT1010</option>
+                    </optgroup>
+                  <optgroup label='<strong>BUSINESS CORE REQUIREMENTS</strong>'>
+                        <option value="ACC2010">ACC2010</option>
+                        <option value="ACC2020">ACC2020</option>
+                        <option value="CIS1010">CIS1010</option>
+                        <option value="CIS2010">CIS2010</option>
+                        <option value="CIS3300">CIS3300</option>
+                        <option value="CIS3320">CIS3320</option>
+                        <option value="MGT2210">MGT2210</option>
+                        <option value="MKT2040">MKT2040</option>
+                        <option value="FIN3300">FIN3300</option>
+                        <option value="MGT3000">MGT3000</option>
+                        <option value="MKT3000">MKT3000</option>
+                        <option value="MGT4950">MGT4950</option>
+                  </optgroup>
+                  <optgroup label='<strong>ADDITIONAL SCHOOL OF BUSINESS REQUIREMENTS</strong>'>
+                   <option value="MTH1320">MTH1320</option>
+                  </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSY1001 or SOC1010. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSY1001">PSY1001</option>
+                        <option value="SOC1010">SOC1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSC1010 or PSC1020. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSC1010">PSC1010</option>
+                        <option value="PSC1020">PSC1020</option>
+                    </optgroup>
+                <!--END SOB/GEN ED courses-->
+                  <optgroup label='FIN Courses'>
+                        <option value="FIN3010">FIN3010</option>
+                        <option value="FIN3100">FIN3100</option>
+                        <option value="FIN3150">FIN3150</option>
+                        <option value="FIN3320">FIN3320</option>
+                        <option value="FIN3420">FIN3420</option>
+                        <option value="FIN3450">FIN3450</option>
+                        <option value="FIN3600">FIN3600</option>
+                        <option value="FIN3850">FIN3850</option>
+                        <option value="FIN4200">FIN4200</option>
+                        <option value="FIN4400">FIN4400</option>
+                        <option value="FIN4500">FIN4500</option>
+                        <option value="FIN4600">FIN4600</option>
+                        <option value="FIN4750">FIN4750</option>
+                        <option value="FIN4950">FIN4950</option>
+                  </optgroup>
+                   <optgroup label='<strong>ADDITIONAL ELECTIVES </strong><small><em>CIS Department Requires 17</em></small>'>
+                        <option value="ELC1001">One Credit Hour Elective</option>
+                        <option value="ELC2001">One Credit Hour Elective</option>
+                        <option value="ELC3001">One Credit Hour Elective</option>
+                        <option value="ELC4001">One Credit Hour Elective</option>
+                        <option value="ELC5001">One Credit Hour Elective</option>
+                        <option value="ELC6001">One Credit Hour Elective</option>
+                        <option value="ELC7001">One Credit Hour Elective</option>
+                        <option value="ELC8001">One Credit Hour Elective</option>
+                        <option value="ELC9001">One Credit Hour Elective</option>
+                        <option value="ELC1003">Three Credit Hour Elective</option>
+                        <option value="ELC2003">Three Credit Hour Elective</option>
+                        <option value="ELC3003">Three Credit Hour Elective</option>
+                        <option value="ELC4003">Three Credit Hour Elective</option>
+                        <option value="ELC5003">Three Credit Hour Elective</option>
+                        <option value="ELC6003">Three Credit Hour Elective</option>
+                        <option value="ELC7003">Three Credit Hour Elective</option>
+                        <option value="ELC8003">Three Credit Hour Elective</option>
+                        <option value="ELC9003">Three Credit Hour Elective</option>
+                        <option value="ELC1004">Four Credit Hour Elective</option>
+                        <option value="ELC2004">Four Credit Hour Elective</option>
+                        <option value="ELC3004">Four Credit Hour Elective</option>
+                        <option value="ELC4004">Four Credit Hour Elective</option>
+                        <option value="ELC5004">Four Credit Hour Elective</option>
+                        <option value="ELC6004">Four Credit Hour Elective</option>
+                        <option value="ELC7004">Four Credit Hour Elective</option>
+                        <option value="ELC8004">Four Credit Hour Elective</option>
+                        <option value="ELC9004">Four Credit Hour Elective</option>
+                  </optgroup>
+            </select>
+            <!--Anchor to deselct multi select-->
+            <a href="#" id="deselect-all4" title="Deselect All attributes">Start over <small>&#40;This will remove all selected Items&#41;</small></a>
+            </div>
+            <!--end multiselect list for fin department-->
+             <!--multiselect list for acc department-->
+            <div id="acc-wrap">
+            <legend>Please select the courses you have taken for your Accounting degree.</legend>
+            <select multiple="multiple" id="my-select-acc" name="my-select[]">
+<!--BEGIN SOB/GENED courses-->
+                     <optgroup label='<strong>GENERAL STUDIES REQUIREMENTS</strong>'>
+                        <option value="ENG1010">ENG1010</option>
+                        <option value="ENG1020">ENG1020</option>
+                        <option value="MTH1310">MTH1310</option>
+                        <option value="SPE1010">SPE1010</option>
+                        <option value="ECO2010">ECO2010</option>
+                        <option value="ECO2020">ECO2020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Any History and Arts &amp; Humanities course will satisfy the HIS and ART requirement.</em></small>">
+                        <option value="HIS1010">HIS1010</option>
+                        <option value="ART1010">ART1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PHI1030 or PHI3360. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PHI1030">PHI1030</option>
+                        <option value="PHI3360">PHI3360</option>
+
+                    </optgroup>
+                    <optgroup label="<small><em>Any two Natural Science Courses will fill the NAT requirements. Select both NAT courses if you have taken two of ANY Natural Science courses.</em></small>">
+                        <option value="NAT1010">NAT1010</option>
+                        <option value="NAT1020">NAT1020</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Global Diversity and Multicultural Requirements are defined by Major. Select the GLB and/or MLT course if you have taken a course that satisfies the requirement. If you are unsure, please contact an advisor in your department.</em></small>">
+                        <option value="GLB1010">GLB1010</option>
+                        <option value="MLT1010">MLT1010</option>
+                    </optgroup>
+                  <optgroup label='<strong>BUSINESS CORE REQUIREMENTS</strong>'>
+                        <option value="ACC2010">ACC2010</option>
+                        <option value="ACC2020">ACC2020</option>
+                        <option value="CIS1010">CIS1010</option>
+                        <option value="CIS2010">CIS2010</option>
+                        <option value="CIS3300">CIS3300</option>
+                        <option value="CIS3320">CIS3320</option>
+                        <option value="MGT2210">MGT2210</option>
+                        <option value="MKT2040">MKT2040</option>
+                        <option value="FIN3300">FIN3300</option>
+                        <option value="MGT3000">MGT3000</option>
+                        <option value="MKT3000">MKT3000</option>
+                        <option value="MGT4950">MGT4950</option>
+                  </optgroup>
+                  <optgroup label='<strong>ADDITIONAL SCHOOL OF BUSINESS REQUIREMENTS</strong>'>
+                   <option value="MTH1320">MTH1320</option>
+                  </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSY1001 or SOC1010. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSY1001">PSY1001</option>
+                        <option value="SOC1010">SOC1010</option>
+                    </optgroup>
+                    <optgroup label="<small><em>Please select only one, PSC1010 or PSC1020. If you have taken both, only select one here and indicate the other as an &#39;ADDITIONAL ELECTIVE&#39; below.</em></small>">
+                        <option value="PSC1010">PSC1010</option>
+                        <option value="PSC1020">PSC1020</option>
+                    </optgroup>
+                <!--END SOB/GEN ED courses-->
+                  <optgroup label='ACC Courses'>
+                        <option value="ACC3090">ACC3090</option>
+                        <option value="ACC3100">ACC3100</option>
+                        <option value="ACC3110">ACC3110</option>
+                        <option value="ACC3200">ACC3200</option>
+                        <option value="ACC3300">ACC3300</option>
+                        <option value="ACC3400">ACC3400</option>
+                        <option value="ACC3510">ACC3510</option>
+                        <option value="ACC3520">ACC3520</option>
+                        <option value="ACC3750">ACC3750</option>
+                        <option value="ACC3980">ACC3980</option>
+                        <option value="ACC4200">ACC4200</option>
+                        <option value="ACC4510">ACC4510</option>
+                        <option value="ACC490C">ACC490C</option>
+                  </optgroup>
+                   <optgroup label='<strong>ADDITIONAL ELECTIVES </strong><small><em>CIS Department Requires 17</em></small>'>
+                        <option value="ELC1001">One Credit Hour Elective</option>
+                        <option value="ELC2001">One Credit Hour Elective</option>
+                        <option value="ELC3001">One Credit Hour Elective</option>
+                        <option value="ELC4001">One Credit Hour Elective</option>
+                        <option value="ELC5001">One Credit Hour Elective</option>
+                        <option value="ELC6001">One Credit Hour Elective</option>
+                        <option value="ELC7001">One Credit Hour Elective</option>
+                        <option value="ELC8001">One Credit Hour Elective</option>
+                        <option value="ELC9001">One Credit Hour Elective</option>
+                        <option value="ELC1003">Three Credit Hour Elective</option>
+                        <option value="ELC2003">Three Credit Hour Elective</option>
+                        <option value="ELC3003">Three Credit Hour Elective</option>
+                        <option value="ELC4003">Three Credit Hour Elective</option>
+                        <option value="ELC5003">Three Credit Hour Elective</option>
+                        <option value="ELC6003">Three Credit Hour Elective</option>
+                        <option value="ELC7003">Three Credit Hour Elective</option>
+                        <option value="ELC8003">Three Credit Hour Elective</option>
+                        <option value="ELC9003">Three Credit Hour Elective</option>
+                        <option value="ELC1004">Four Credit Hour Elective</option>
+                        <option value="ELC2004">Four Credit Hour Elective</option>
+                        <option value="ELC3004">Four Credit Hour Elective</option>
+                        <option value="ELC4004">Four Credit Hour Elective</option>
+                        <option value="ELC5004">Four Credit Hour Elective</option>
+                        <option value="ELC6004">Four Credit Hour Elective</option>
+                        <option value="ELC7004">Four Credit Hour Elective</option>
+                        <option value="ELC8004">Four Credit Hour Elective</option>
+                        <option value="ELC9004">Four Credit Hour Elective</option>
+                  </optgroup>
+            </select>
+            <!--Anchor to deselct multi select-->
+            <a href="#" id="deselect-all5" title="Deselect All attributes">Start over <small>&#40;This will remove all selected Items&#41;</small></a>
+            </div>
+            <!--end multiselect list for acc department-->
+        </div>
+        <button id="profile-button" type="submit" value="Submit">Advizzze Me!</button>
+    </form>
+    </div>
+</body>
+</html>
