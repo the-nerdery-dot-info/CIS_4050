@@ -3,7 +3,7 @@
  * Post data to Student and Courses Taken table on submission of the profile page.
  *
  * */
-require_once('config.php');
+require('config.php');
 
 //Store data in student table
 $student_id = $_POST['student_id'];

@@ -26,6 +26,6 @@ if (!$db_selected){
     die('Cannot use' . DB_NAME . ': ' . mysql_error());
 }
 
-echo 'Connected Successfully';
+//echo 'Connected Successfully';
 
 ?>

@@ -324,31 +324,31 @@ $('#my-select-acc').bind('change', function(){
     $('#departments').bind('change', function(){
             //CIS department select menu
         if( $("#departments").val() == 'cis') {
-            $("#cis-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            $("#cis-wrap").delay(500).show( "drop" , {direction: "right"}, 1000 );
         }else{
             $("#cis-wrap").hide( "drop" , {direction: "left"}, 1200 );
         }
         //MGT department select menu
         if( $("#departments").val() == 'mgt' ){
-            $("#mgt-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            $("#mgt-wrap").delay(500).show( "drop" , {direction: "right"}, 1000 );
         }else{
             $("#mgt-wrap").hide( "drop" , {direction: "left"}, 1200 );
         }
         //MKT department select menu
         if( $("#departments").val() == 'mkt' ){
-            $("#mkt-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            $("#mkt-wrap").delay(500).show( "drop" , {direction: "right"}, 1000 );
         }else{
             $("#mkt-wrap").hide( "drop" , {direction: "left"}, 1200 );
         }
         //FIN department select menu
         if( $("#departments").val() == 'fin' ){
-            $("#fin-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            $("#fin-wrap").delay(500).show( "drop" , {direction: "right"}, 1000 );
         }else{
             $("#fin-wrap").hide( "drop" , {direction: "left"}, 1200 );
         }
         //ACC department select menu
         if( $("#departments").val() == 'acc' ){
-            $("#acc-wrap").delay(1000).show( "drop" , {direction: "right"}, 1000 );
+            $("#acc-wrap").delay(500).show( "drop" , {direction: "right"}, 1000 );
         }else{
             $("#acc-wrap").hide( "drop" , {direction: "left"}, 1200 );
         }
@@ -367,7 +367,7 @@ $('#my-select-acc').bind('change', function(){
     <h2><em>Please <a href="https://connectu.msudenver.edu/cp/home/displaylogin">click here</a> to log into your ConnectU account and print a current CAPP report in order to accurately complete this form.</em></h2>
    <!--radio buttons for student to select department which will trigger different select lists-->
 
-    <form action="degree-builder.php" method="post">
+    <form action="new-degree-builder.php" method="post">
         <div id="wrap-center">
             <fieldset>
             <legend>Tell us a little bit about yourself.</legend>

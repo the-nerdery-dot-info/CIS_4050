@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Jul 26, 2014 at 05:27 AM
+-- Generation Time: Jul 26, 2014 at 09:40 PM
 -- Server version: 5.5.34
 -- PHP Version: 5.5.10
 
@@ -222,22 +222,24 @@ CREATE TABLE `CoursesTaken` (
 --
 
 INSERT INTO `CoursesTaken` (`student_id`, `course_id`) VALUES
-('900544740', 'ART1010'),
-('900544740', 'CIS3030'),
-('900544740', 'CIS3060'),
-('900544740', 'CIS3220'),
-('900544740', 'CIS4050'),
+('900544740', 'ACC2020'),
+('900544740', 'CIS1010'),
+('900544740', 'CIS2010'),
+('900544740', 'CIS3300'),
+('900544740', 'CIS3320'),
 ('900544740', 'ENG1010'),
 ('900544740', 'ENG1020'),
-('900544740', 'MGT2210'),
-('900544740', 'MGT3000'),
-('900544740', 'MKT3000'),
+('900544740', 'HIS1010'),
+('900544740', 'MGT3020'),
+('900544740', 'MGT3220'),
+('900544740', 'MGT3230'),
+('900544740', 'MGT3240'),
+('900544740', 'MGT3530'),
+('900544740', 'MLT1010'),
 ('900544740', 'MTH1310'),
 ('900544740', 'MTH1320'),
-('900544740', 'NAT1010'),
-('900544740', 'PHI1030'),
-('900544740', 'PSC1010'),
-('900544740', 'PSY1001'),
+('900544740', 'NAT1020'),
+('900544740', 'PHI3360'),
 ('900544740', 'SPE1010');
 
 -- --------------------------------------------------------
@@ -395,14 +397,3 @@ CREATE TABLE `student` (
   `student_email` varchar(100) NOT NULL,
   PRIMARY KEY (`student_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `student`
---
-
-INSERT INTO `student` (`student_id`, `department_id`, `student_lname`, `student_fname`, `student_phone`, `student_email`) VALUES
-('', 'def', '', '', '', ''),
-('1', 'cis', 'P', 'G', '1', 'g@p.com'),
-('2', 'cis', 'p', 'g', '2', 'd@b.com'),
-('7', 'mkt', 'k', 'j', '3', 'g'),
-('900544740', 'cis', 'Pickrel', 'Garrett', '7206264364', 'gpickrel@gmail.com');

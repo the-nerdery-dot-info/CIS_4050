@@ -410,3 +410,24 @@ UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT4850';
 UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT390A';
 UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT490C';
 UPDATE `Courses` SET `mgt_major` = 'MGT' WHERE `course_id` = 'MGT490D';
+
+
+SELECT
+                            s.student_id
+                            FROM
+                            `Student` s
+                            JOIN
+                            `CoursesTaken` ct
+                            ON
+                            s.student_id = ct.student_id
+                            WHERE
+                            ct.student_id IN
+                            	(SELECT
+                                 	c.*
+                                 	FROM
+                            		`Courses` c
+                            		LEFT JOIN
+                            		`CoursesTaken` ct
+                            		ON
+                            		(c.course_id = ct.course_id)
+                        		WHERE ct.course_id IS NULL AND c.cis_major IS NOT NULL AND c.course_level = '2');
