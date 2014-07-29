@@ -1,7 +1,7 @@
 *{
     font-family: lato, arial, sans-serif;
 }
-body, h1, form, input, button, #anchor_wrap, fieldset, #wrap-left, #wrap-center, legend, #wrapper2, #wrap-center-multiselect, #studentInfo, #advisorInfo, header{
+body, h1, form, input, button, #anchor_wrap, fieldset, #wrap-left, #wrap-center, legend, #wrapper2, #wrap-center-multiselect, #studentInfo, #advisorInfo, #advisorInfo p, #freshman, #sophmore, #junior, #senior{
     display: block;
     float: left;
     position: relative;
@@ -18,37 +18,24 @@ body{
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    background-image: url('../../CIS_4050/images/msulogo2.png');
-    background-size: 300px 165px;
-    background-repeat: no-repeat;
-    background-position: center 35px;
+
     height: 100%;
 }
 #cis-wrap, #mgt-wrap, #mkt-wrap, #acc-wrap, #fin-wrap{
     display: none;
 }
-#freshWrap, #sophWrap, #juniorWrap, #seniorWrap{
-    display: none;
-}
-#desc1, #desc2, #desc3, #desc4{
-    display: none;
-    clear: left;
-    width: 99%;
-    background: white;
-    margin: 0;
-    padding: 5px;
-    border-radius: 2px;
-    border: 1px solid #074E68;
-}
 #wrapper2{
-
+background-image: url('../../CIS_4050/images/msulogo2.png');
+    background-size: 300px 160px;
+    background-repeat: no-repeat;
+    background-position: center 0px;
     width: 90%;
-    margin: 0 5%;
+    margin: 5px 5% 0 5%;
     padding: 0;
 }
 h1, h2{
     width: 80%;
-    margin: 140px 10% 0 10%;
+    margin: 160px 10% 0 10%;
     text-align: center;
     color: #fafafa;
     letter-spacing: .05em;
@@ -56,29 +43,6 @@ h1, h2{
 }
 h2{
     margin: 0px 10%
-}
-h3{
-    display: block;
-    float: left;
-    width: 100%;
-    color: #444444;
-    background-color: #e6e6e6;
-    border: .5px solid #333333;
-    box-shadow: 0px 0px 6px black inset;
-    border-radius: 2px;
-    margin: 2px 0 20px 0;
-    padding: 0px;
-    text-indent: 6px;
-    font-size: 36px;
-    font-weight: 300;
-}
-header{
-    width: 90%;
-    margin: 30px 5% 0 5%;
-}
-header p{
-    text-align: center;
-    color: #333333;
 }
 form{
     width: 100%;
@@ -279,9 +243,74 @@ input:focus{
 }
 #studentInfo, #advisorInfo{
     width: 80%;
-    margin: 30px 10% !important;
-    text-align: center;
+    margin: 10px 10% !important;
+    text-align: left;
+}
+h3{
+    display: block;
+    float: left;
+    width: 100%;
+    color: #444444;
+    border-bottom: .5px solid orange;
+    margin: 10px 0 2px 0;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+}
+small{
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    color: #444444;
 }
 #studentInfo p, #advisorInfo p{
-    margin: 4px;
+    margin: 5px 0 0 0;
+    clear: left;
+    color: #e1e1e1;
+}
+strong{
+    color: #222222;
+    font-weight: 300 !important;
+    padding-right: 10px;
+
+}
+a{
+    display: block;
+    float: left;
+    text-decoration: none !important;
+    color: #fafafa;
+    background: orange;
+    border-radius: 3px;
+    border: .5px solid white;
+    padding: 10px;
+    margin: 10px;
+    width: 80px;
+    text-align: center;
+
+}
+#freshman, #sophmore, #junior, #senior{
+    clear: left;
+    width: 99%;
+    background: white;
+    margin: 10px 0 0 0;
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #074E68;
+
+
+}
+#freshman h3, #sophmore h3, #junior h3, #senior h3{
+    display: block;
+    float: left;
+    width: 100%;
+    color: #444444;
+    background-color: #1da1da;
+    border: 1px solid #1da1da;
+    box-shadow: 0px 0px 6px black inset;
+    border-radius: 2px;
+    margin: 2px 0 20px 0;
+    padding: 0px;
+    text-indent: 6px;
+    font-size: 36px;
+    font-weight: 300;
 }

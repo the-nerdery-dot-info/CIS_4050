@@ -1,0 +1,2 @@
+/*Update Courses table with course_desc added to the database.*/
+UPDATE `Courses` SET `course_desc`= 'This is a problem-solving course in which the tools of structured design are used to design computerized solutions to business problems. Procedural programming languages are used to implement these designs. Emphasis is placed on the implementation of the three logic constructs in procedural languages: sequence, selection and iteration.' WHERE `course_id`= 'CIS2110';

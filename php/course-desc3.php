@@ -26,9 +26,9 @@
                                 die('Invalid query: ' . mysql_error());
                             }
         while ($courseItem = mysql_fetch_array ( $results )) {
-                        echo $courseItem['course_id'] . '<br /><br />';
-                        echo $courseItem['course_name'] . '<br /><br />';
-                        echo $courseItem['course_desc'] . '<br /><br />';
+                        echo '<p><strong>Course ID: </strong>' . $courseItem['course_id'] . '</p>';
+                        echo '<p><strong>Course Name: </strong>' . $courseItem['course_name'] . '</p>';
+                        echo '<p><strong>Course Description: </strong>' . $courseItem['course_desc'] . '</p><br />';
         }
 //MGT STUDENT
         }else if (mysql_result($studentR, 0) == 'mgt'){
@@ -48,9 +48,9 @@
                                 die('Invalid query: ' . mysql_error());
                             }
         while ($courseItem = mysql_fetch_array ( $results )) {
-                        echo $courseItem['course_id'] . '<br /><br />';
-                        echo $courseItem['course_name'] . '<br /><br />';
-                        echo $courseItem['course_desc'] . '<br /><br />';
+                        echo '<p><strong>Course ID: </strong>' . $courseItem['course_id'] . '</p>';
+                        echo '<p><strong>Course Name: </strong>' . $courseItem['course_name'] . '</p>';
+                        echo '<p><strong>Course Description: </strong>' . $courseItem['course_desc'] . '</p><br />';
         }
 
 //MKT STUDENT
@@ -71,9 +71,9 @@
                                 die('Invalid query: ' . mysql_error());
                             }
         while ($courseItem = mysql_fetch_array ( $results )) {
-                        echo $courseItem['course_id'] . '<br /><br />';
-                        echo $courseItem['course_name'] . '<br /><br />';
-                        echo $courseItem['course_desc'] . '<br /><br />';
+                        echo '<p><strong>Course ID: </strong>' . $courseItem['course_id'] . '</p>';
+                        echo '<p><strong>Course Name: </strong>' . $courseItem['course_name'] . '</p>';
+                        echo '<p><strong>Course Description: </strong>' . $courseItem['course_desc'] . '</p><br />';
         }
 //FIN STUDENT
         }else if (mysql_result($studentR, 0) == 'fin'){
@@ -93,9 +93,9 @@
                                 die('Invalid query: ' . mysql_error());
                             }
         while ($courseItem = mysql_fetch_array ( $results )) {
-                        echo $courseItem['course_id'] . '<br /><br />';
-                        echo $courseItem['course_name'] . '<br /><br />';
-                        echo $courseItem['course_desc'] . '<br /><br />';
+                        echo '<p><strong>Course ID: </strong>' . $courseItem['course_id'] . '</p>';
+                        echo '<p><strong>Course Name: </strong>' . $courseItem['course_name'] . '</p>';
+                        echo '<p><strong>Course Description: </strong>' . $courseItem['course_desc'] . '</p><br />';
         }
 //ACC STUDENT
         }else if (mysql_result($studentR, 0) == 'acc'){
@@ -115,9 +115,9 @@ $sql = "SELECT
                                 die('Invalid query: ' . mysql_error());
                             }
         while ($courseItem = mysql_fetch_array ( $results )) {
-                        echo $courseItem['course_id'] . '<br /><br />';
-                        echo $courseItem['course_name'] . '<br /><br />';
-                        echo $courseItem['course_desc'] . '<br /><br />';
+                        echo '<p><strong>Course ID: </strong>' . $courseItem['course_id'] . '</p>';
+                        echo '<p><strong>Course Name: </strong>' . $courseItem['course_name'] . '</p>';
+                        echo '<p><strong>Course Description: </strong>' . $courseItem['course_desc'] . '</p><br />';
         }
 
         };

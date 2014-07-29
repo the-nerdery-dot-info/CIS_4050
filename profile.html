@@ -10,15 +10,25 @@
 <title>MSU Student Advising Portal</title>
 <link href="css/profilelayout.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="assets/lou-multi-select-5839faf/css/multi-select.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="css/goalProgress.css" rel="stylesheet" type="text/css" media="screen"/>
+
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <script src="../CIS_4050/assets/lou-multi-select-5839faf/js/jquery.multi-select.js"></script>
+<script src="../CIS_4050/js/goalProgress.js"></script>
+
 
 <script type="text/javascript">
 //instance for multiselect list by department
     $(document).ready(function(){
+    $('#progress').goalProgress({
+        goalAmount: 3,
+        currentAmount: 1,
+        textBefore: 'Step: ',
+        textAfter: ' Build Profile'
+    });
         $('#my-select-cis').multiSelect();
         $('#my-select-mgt').multiSelect();
         $('#my-select-mkt').multiSelect();
@@ -362,9 +372,12 @@ $('#my-select-acc').bind('change', function(){
 
 </head>
 <body>
+    <div id="progress"></div>
     <div id="wrapper2">
+    <header>
     <h1>MSU Denver School of Business Advising Portal</h1>
     <h2><em>Please <a href="https://connectu.msudenver.edu/cp/home/displaylogin">click here</a> to log into your ConnectU account and print a current CAPP report in order to accurately complete this form.</em></h2>
+    </header>
    <!--radio buttons for student to select department which will trigger different select lists-->
 
     <form action="new-degree-builder.php" method="post">
@@ -941,7 +954,7 @@ $('#my-select-acc').bind('change', function(){
             </div>
             <!--end multiselect list for acc department-->
         </div>
-        <button id="profile-button" type="submit" value="Submit">Advizzze Me!</button>
+        <button id="profile-button" type="submit" value="Submit">Build Plan</button>
     </form>
     </div>
 </body>

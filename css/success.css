@@ -8,11 +8,11 @@ body, #degree-path-wrapper, #courses-needed-wrapper, header{
 }
 
 html{
-    background: linear-gradient(#1DA1DA, #1870AE) repeat scroll 0% 0% transparent;
-    background-size: cover;
+/*    background: linear-gradient(#1DA1DA, #1870AE) repeat scroll 0% 0% transparent;*/
+    background-color: #1da1da;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100%;
-    min-height: 1100px !important;
 }
 body{
     margin: 0 auto;
@@ -46,7 +46,7 @@ h1{
     width: 90%;
     margin: 10px 5%;
     font-size: 16px;
-    
+
 }
 #degree-path-wrapper h1{
     padding: 0;
@@ -75,7 +75,7 @@ h2:hover{
     background: -webkit-linear-gradient(#999999 30%, #e6e6e6 100%)); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#999999 30%, #e6e6e6 100%)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#999999 30%, #e6e6e6 100%)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#555555 30%, #999999 100%); /* Standard syntax */    
+    background: linear-gradient(#555555 30%, #999999 100%); /* Standard syntax */
 /*     border-bottom: 1px solid #1da1da;
     border-top: 1px solid #1da1da; */
 }
@@ -124,7 +124,7 @@ header p{
     text-align: center;
     font-weight: 300;
     color: #fafafa;
-    
+
 }
 .ui-draggable{
     list-style: none;
@@ -137,4 +137,7 @@ header p{
     background-color: #1da1da;
     color: #fafafa;
     box-shadow: 0px 0px 20px black;
+}
+#freshWrap, #sophWrap, #juniorWrap, #seniorWrap{
+    display: none;
 }
